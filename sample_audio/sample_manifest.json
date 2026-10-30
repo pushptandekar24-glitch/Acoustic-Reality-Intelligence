@@ -1,0 +1,117 @@
+{
+  "manifest_version": "1.0",
+  "project": "Acoustic Reality Intelligence (ARI)",
+  "dataset_reference": "EnvSDD: Environmental Sound Deepfake Detection (Interspeech 2025 / ICASSP 2026 ESDD Challenge, arXiv:2505.19203, https://envsdd.github.io/)",
+  "disclaimer": "These audio samples are provided strictly for demonstration and testing of the experimental SVM classifier. They do not guarantee correct predictions across diverse recording environments.",
+  "categories": {
+    "rain_and_thunder": {
+      "id": "rain_and_thunder",
+      "name": "Rain and Thunder",
+      "icon": "🌧",
+      "description": "Environmental precipitation and thunder claps.",
+      "samples": {
+        "sample_a_real": {
+          "sample_id": "rain_real_demo",
+          "display_title": "Rain and Thunder — Demonstration Recording",
+          "filename": "sample_rain_thunder.wav",
+          "role": "Real Audio",
+          "is_verified": false,
+          "ground_truth_class": null,
+          "ground_truth_label": "Demo audio — authenticity label unverified",
+          "source": "ARI Demonstration Archive",
+          "license": "Unverified demonstration license",
+          "generator": "Unknown / Unverified Source",
+          "caption": "Environmental sound recording of rainfall and rolling thunder.",
+          "notes": "Authenticity label unverified: source metadata in project archive does not independently confirm physical recording origin."
+        },
+        "sample_b_ai": {
+          "sample_id": "rain_ai_missing",
+          "display_title": "Rain and Thunder — AI-Generated Audio",
+          "filename": null,
+          "role": "AI-Generated Audio",
+          "is_verified": false,
+          "ground_truth_class": null,
+          "ground_truth_label": "Missing verified sample",
+          "source": "Unavailable in EnvSDD dataset",
+          "license": null,
+          "generator": null,
+          "caption": "No verified paired AI-generated Rain & Thunder example available.",
+          "notes": "A verified real/AI-generated pair for Rain and Thunder could not be obtained from EnvSDD without violating anti-fabrication standards. Procedural tones were strictly excluded."
+        }
+      }
+    },
+    "birds_and_insects": {
+      "id": "birds_and_insects",
+      "name": "Birds and Insects",
+      "icon": "🐦",
+      "description": "Natural wildlife, birdsong, and insect ambiance.",
+      "samples": {
+        "sample_a_real": {
+          "sample_id": "birds_real_envsdd",
+          "display_title": "Birds & Fly Ambiance — Authentic Recording",
+          "filename": "envsdd_birds_real.mp3",
+          "role": "Real Audio",
+          "is_verified": true,
+          "ground_truth_class": 0,
+          "ground_truth_label": "Real Audio",
+          "source": "EnvSDD / Clotho ('05687 morning birds ambience.wav')",
+          "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+          "generator": "Authentic Field Recording",
+          "caption": "A fly whizzes by while birds are chirping and a person takes a few breathes.",
+          "notes": "Verified ground-truth real audio from official Clotho dataset curated in EnvSDD."
+        },
+        "sample_b_ai": {
+          "sample_id": "birds_ai_envsdd",
+          "display_title": "Birds & Fly Ambiance — AudioLDM Synthetic Generation",
+          "filename": "envsdd_birds_fake_audioldm.mp3",
+          "role": "AI-Generated Audio",
+          "is_verified": true,
+          "ground_truth_class": 1,
+          "ground_truth_label": "AI-Generated Audio",
+          "source": "EnvSDD / AudioLDM (Text-to-Audio)",
+          "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+          "generator": "AudioLDM (Latent Diffusion Text-to-Audio)",
+          "caption": "A fly whizzes by while birds are chirping and a person takes a few breathes.",
+          "notes": "Verified ground-truth AI-generated audio synthesized by AudioLDM conditioned on the paired Clotho text prompt."
+        }
+      }
+    },
+    "siren_and_alarm": {
+      "id": "siren_and_alarm",
+      "name": "Siren and Alarm",
+      "icon": "🚨",
+      "description": "Emergency siren and audible alert signals.",
+      "samples": {
+        "sample_a_real": {
+          "sample_id": "siren_real_envsdd",
+          "display_title": "Urban Emergency Siren — Authentic Recording",
+          "filename": "envsdd_siren_real.wav",
+          "role": "Real Audio",
+          "is_verified": true,
+          "ground_truth_class": 0,
+          "ground_truth_label": "Real Audio",
+          "source": "EnvSDD / UrbanSound8K ('157867-8-0-1.wav')",
+          "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+          "generator": "Authentic Urban Acoustic Recording",
+          "caption": "Siren.",
+          "notes": "Verified ground-truth real acoustic siren recording from UrbanSound8K curated in EnvSDD."
+        },
+        "sample_b_ai": {
+          "sample_id": "siren_ai_envsdd",
+          "display_title": "Urban Emergency Siren — AudioLDM Synthetic Generation",
+          "filename": "envsdd_siren_fake_audioldm.wav",
+          "role": "AI-Generated Audio",
+          "is_verified": true,
+          "ground_truth_class": 1,
+          "ground_truth_label": "AI-Generated Audio",
+          "source": "EnvSDD / AudioLDM 1 (Text-to-Audio)",
+          "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+          "generator": "AudioLDM 1 (Latent Diffusion Text-to-Audio)",
+          "caption": "Siren.",
+          "notes": "Verified ground-truth AI-generated audio synthesized by AudioLDM 1 conditioned on the UrbanSound8K siren caption."
+        }
+      }
+    }
+  }
+}
+

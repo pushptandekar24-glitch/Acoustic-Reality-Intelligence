@@ -1,0 +1,28 @@
+{
+  "metadata_version": 1,
+  "model_sha256": "b6d965c31ceba6a6be2483af2e378dead36f59a44ea97f5c3b3cf6f5a8160f91",
+  "class_names": {
+    "0": "Real",
+    "1": "AI-generated"
+  },
+  "headlines": {
+    "0": "Your audio appears to be REAL",
+    "1": "Your audio appears to be AI-GENERATED"
+  },
+  "mapping_source": "Original training notebook Acoustic_Reality_Intelligence.ipynb: y.append(1 if label == 'fake' else 0), classification_report(labels=[0, 1], target_names=['Real', 'AI-generated'])",
+  "preprocessing": {
+    "sample_rate": 16000,
+    "mono": true,
+    "n_mfcc": 13,
+    "features_total": 26,
+    "feature_statistics": ["mean", "std"],
+    "scaler": "StandardScaler",
+    "classifier": "SVC(kernel='rbf', probability=True)"
+  },
+  "baseline_metrics": {
+    "accuracy": 0.8375,
+    "test_samples": 80,
+    "note": "Reported on original random test split; not a guarantee for new unseen recordings."
+  }
+}
+

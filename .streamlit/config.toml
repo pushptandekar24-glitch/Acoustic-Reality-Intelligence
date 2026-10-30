@@ -1,0 +1,17 @@
+[client]
+showSidebarNavigation = false
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+
+[theme]
+base = "dark"
+backgroundColor = "#080c16"
+secondaryBackgroundColor = "#101725"
+textColor = "#f3f6ff"
+primaryColor = "#3878ff"
